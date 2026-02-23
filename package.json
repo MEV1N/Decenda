@@ -16,7 +16,7 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@prisma/client": "^7.4.1",
+    "@prisma/client": "^6.19.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

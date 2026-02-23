@@ -756,6 +756,52 @@ a:hover {
   margin-bottom: 1.2rem;
 }
 
+.form-section-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--red-vivid);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--red-muted);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.member2-section {
+  margin-top: 1.6rem;
+  animation: fadeInUp 0.4s ease both;
+}
+
+.same-college-check {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.3rem;
+  cursor: pointer;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.same-college-check input[type='checkbox'] {
+  accent-color: var(--red-vivid);
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.same-college-note {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: var(--bg-mid);
+  border: 1px dashed var(--red-muted);
+  border-radius: 3px;
+  padding: 0.6rem 1rem;
+  margin-top: 0.5rem;
+}
+
 .form-label {
   display: block;
   font-family: 'Share Tech Mono', monospace;

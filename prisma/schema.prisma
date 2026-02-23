@@ -8,10 +8,15 @@ datasource db {
 }
 
 model Registration {
-  id        String   @id @default(cuid())
-  name      String
-  email     String   @unique
-  phone     String   @unique
-  college   String
-  createdAt DateTime @default(now())
+  id             String   @id @default(cuid())
+  teamName       String
+  name           String
+  email          String   @unique
+  phone          String   @unique
+  college        String
+  member2Name    String?
+  member2Email   String?  @unique
+  member2Phone   String?  @unique
+  member2College String?
+  createdAt      DateTime @default(now())
 }

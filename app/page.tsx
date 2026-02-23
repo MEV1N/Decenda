@@ -121,29 +121,35 @@ export default function Home() {
         <div className="card">
           <h2 className="section-title">⬡ Organised By</h2>
           <div className="org-grid">
-            <div className="org-item">
-              <Image src="/img/th logo.png" alt="TinkerHub" width={40} height={40} style={{ objectFit: 'contain' }} />
-              <div>
-                <p className="org-name">TinkerHub MBCCET</p>
+            {/* Row 1 */}
+            <div className="org-row">
+              <div className="org-item">
+                <Image src="/img/th logo.png" alt="TinkerHub" width={40} height={40} style={{ objectFit: 'contain' }} />
+                <div>
+                  <p className="org-name">TinkerHub MBCCET</p>
+                </div>
+              </div>
+              <div className="org-item">
+                <Image src="/img/mulogo.png" alt="MuLearn" width={40} height={40} style={{ objectFit: 'contain' }} />
+                <div>
+                  <p className="org-name">MuLearn MBCCET</p>
+                </div>
               </div>
             </div>
-            <div className="org-item">
-              <Image src="/img/mulogo.png" alt="MuLearn" width={40} height={40} style={{ objectFit: 'contain' }} />
-              <div>
-                <p className="org-name">MuLearn MBCCET</p>
+            {/* Row 2 — centred below */}
+            <div className="org-row" style={{ justifyContent: 'center' }}>
+              <div className="org-item">
+                <div className="org-logo">404</div>
+                <div>
+                  <p className="org-name">Room Number 404</p>
+                </div>
               </div>
-            </div>
-            <div className="org-item">
-              <div className="org-logo">404</div>
-              <div>
-                <p className="org-name">Room Number 404</p>
-              </div>
-            </div>
-            <div className="org-item">
-              <div className="org-logo">Hive</div>
-              <div>
-                <p className="org-name">Hive</p>
-                <p className="media-badge">MEDIA PARTNER</p>
+              <div className="org-item">
+                <Image src="/img/hive.png" alt="Hive" width={40} height={40} style={{ objectFit: 'contain' }} />
+                <div>
+                  <p className="org-name">Hive</p>
+                  <p className="media-badge">MEDIA PARTNER</p>
+                </div>
               </div>
             </div>
           </div>

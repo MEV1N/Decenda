@@ -631,10 +631,18 @@ a:hover {
 /* ─── ORGANIZERS ─── */
 .org-grid {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1rem;
   align-items: center;
 }
+
+.org-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
 
 .org-item {
   display: flex;

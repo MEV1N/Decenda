@@ -24,7 +24,7 @@ interface FieldErrors {
     member2Phone?: string;
 }
 
-const WHATSAPP_LINK = 'https://chat.whatsapp.com/PLACEHOLDER';
+const WHATSAPP_LINK = 'https://chat.whatsapp.com/D3GwCvl3FszBRMpSOYMXUL';
 
 export default function RegistrationForm() {
     const [form, setForm] = useState<FormData>({

@@ -232,23 +232,7 @@ a:hover {
   animation: flicker 3s infinite;
 }
 
-/* Logos row — equally spaced flex container */
-.logos-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 0.5rem;
-  margin-bottom: 0.5rem;
-}
 
-.corner-logo {
-  mix-blend-mode: multiply;
-  filter: contrast(1.1);
-  width: 120px;
-  height: 120px;
-  flex-shrink: 0;
-}
 
 /* Centre dec logo */
 .dec-logo {
@@ -263,11 +247,6 @@ a:hover {
     padding: 5rem 0.5rem 1.5rem;
   }
 
-  .corner-logo {
-    width: 60px !important;
-    height: 60px !important;
-  }
-
   .dec-logo {
     max-width: 55vw !important;
     width: 55vw !important;
@@ -276,11 +255,6 @@ a:hover {
 }
 
 @media (max-width: 450px) {
-  .corner-logo {
-    width: 40px !important;
-    height: 40px !important;
-  }
-
   .dec-logo {
     max-width: 42vw !important;
     width: 42vw !important;
@@ -386,6 +360,125 @@ a:hover {
   transform: scale(0.97);
 }
 
+
+
+/* ─── DEC LOGO REVEAL ─── */
+.dec-logo-wrap {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 1rem;
+}
+
+.dec-logo-wrap .dec-logo {
+  filter: blur(12px);
+  opacity: 0.5;
+  display: block;
+}
+
+.dec-logo-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  pointer-events: none;
+}
+
+.dec-logo-title {
+  font-family: Impact, 'Arial Narrow', sans-serif;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  color: #ffffff;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.dec-logo-reveal {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: clamp(0.65rem, 2vw, 0.85rem);
+  color: var(--red-vivid);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+  animation: flicker 4s infinite;
+}
+
+/* ─── COUNTDOWN ─── */
+.countdown-wrap {
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+.countdown-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--red-vivid);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  animation: flicker 5s infinite;
+}
+
+.countdown-grid {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--red-deep);
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  min-width: 64px;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.1);
+}
+
+.countdown-num {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: var(--red-vivid);
+  line-height: 1;
+  text-shadow: 0 0 16px rgba(255, 0, 0, 0.5);
+}
+
+.countdown-tag {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.55rem;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+}
+
+.countdown-sep {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.6rem;
+  color: var(--red-deep);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.countdown-over {
+  font-family: 'Creepster', cursive;
+  font-size: 1.4rem;
+  color: var(--red-vivid);
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px var(--red-glow);
+  margin: 2rem 0 0;
+}
+
+@media (max-width: 500px) {
+  .countdown-unit {
+    min-width: 50px;
+    padding: 0.5rem 0.6rem;
+  }
+}
 
 /* ─── EVENT INFO BOX ─── */
 .event-info-box {
@@ -617,6 +710,55 @@ a:hover {
   color: var(--red-vivid);
   flex-shrink: 0;
   margin-top: 2px;
+}
+
+/* ─── CHALLENGE CATEGORIES ─── */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: var(--bg-mid);
+  border: 1px solid var(--red-muted);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.category-item:hover {
+  border-color: var(--red-vivid);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.15);
+}
+
+.category-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.category-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ─── ORGANIZERS ─── */

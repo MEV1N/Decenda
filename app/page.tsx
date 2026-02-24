@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import RegistrationForm from './components/RegistrationForm';
+import Countdown from './components/Countdown';
 
 export default function Home() {
   return (
@@ -8,16 +9,22 @@ export default function Home() {
         {/* ── HERO ── */}
         <section className="hero">
 
-          {/* Decenda 26 logo — centred */}
-          <Image
-            src="/img/dec logo.png"
-            alt="Decenda 26"
-            width={460}
-            height={260}
-            className="dec-logo"
-            style={{ objectFit: 'contain' }}
-            priority
-          />
+          {/* Decenda 26 logo — blurred until reveal */}
+          <div className="dec-logo-wrap">
+            <Image
+              src="/img/dec logo.png"
+              alt="Decenda 26"
+              width={460}
+              height={260}
+              className="dec-logo"
+              style={{ objectFit: 'contain' }}
+              priority
+            />
+            <div className="dec-logo-overlay">
+              <span className="dec-logo-title">Decenda</span>
+              <span className="dec-logo-reveal">Logo Reveal Soon</span>
+            </div>
+          </div>
 
           <p className="event-subtitle">Capture The Flag</p>
           <p className="event-not-avg">Not your average CTF.</p>
@@ -29,40 +36,36 @@ export default function Home() {
           <div style={{ marginTop: '1.5rem' }}>
             <a href="#register" className="register-now-btn">Register Now</a>
           </div>
-        </section>
 
-        {/* Divider */}
-        <div className="divider">
-          <div className="divider-line" />
-          <span className="divider-icon">☠</span>
-          <div className="divider-line" />
-        </div>
+          {/* Countdown */}
+          <Countdown />
 
-        {/* ── EVENT INFO BOX ── */}
-        <div className="event-info-box">
-          <div className="event-info-grid">
-            <div className="event-info-item">
-              <span className="info-label">Date</span>
-              <span className="info-value">6th March 2026</span>
-            </div>
-            <div className="event-info-item">
-              <span className="info-label">Time</span>
-              <span className="info-value highlight">9:00 AM – 4:00 PM</span>
-            </div>
-            <div className="event-info-item">
-              <span className="info-label">Prize Pool</span>
-              <span className="info-value highlight">₹10,000</span>
-            </div>
-            <div className="event-info-item">
-              <span className="info-label">Entry Fee</span>
-              <span className="info-value highlight">FREE</span>
-            </div>
-            <div className="event-info-item wide">
-              <span className="info-label">Location</span>
-              <span className="info-value">Mar Baselious Christian College of Engineering and Technology, Peermade</span>
+          {/* Event info — date, time, location */}
+          <div className="event-info-box">
+            <div className="event-info-grid">
+              <div className="event-info-item">
+                <span className="info-label">Date</span>
+                <span className="info-value">6th March 2026</span>
+              </div>
+              <div className="event-info-item">
+                <span className="info-label">Time</span>
+                <span className="info-value highlight">9:00 AM – 4:00 PM</span>
+              </div>
+              <div className="event-info-item">
+                <span className="info-label">Prize Pool</span>
+                <span className="info-value highlight">₹10,000</span>
+              </div>
+              <div className="event-info-item">
+                <span className="info-label">Entry Fee</span>
+                <span className="info-value highlight">FREE</span>
+              </div>
+              <div className="event-info-item wide">
+                <span className="info-label">Location</span>
+                <span className="info-value">Mar Baselious Christian College of Engineering and Technology, Peermade</span>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* ── ABOUT ── */}
         <div className="card">
@@ -76,7 +79,42 @@ export default function Home() {
             Can you survive to the end?
           </p>
         </div>
+        {/* ── CHALLENGE CATEGORIES ── */}
+        <div className="card">
+          <h2 className="section-title">⚔ Challenge Categories</h2>
+          <div className="category-grid">
+            <div className="category-item">
+              <span className="category-name">Reverse Engineering</span>
+            </div>
+            <div className="category-item">
+              <span className="category-name">Forensics</span>
+            </div>
+            <div className="category-item">
+              <span className="category-name">Web Exploitation</span>
+            </div>
+            <div className="category-item">
+              <span className="category-name">Cryptography</span>
+            </div>
+            <div className="category-item">
+              <span className="category-name">Steganography</span>
+            </div>
+            <div className="category-item">
+              <span className="category-name">Binary Exploitation</span>
+            </div>
+          </div>
+        </div>
 
+        {/* ── REQUIREMENTS ── */}
+        <div className="card">
+          <h2 className="section-title">⚙ Requirements</h2>
+          <ul className="guidelines-list">
+            <li>Bring your own <strong>laptop and all necessary accessories</strong> — power adapters, cables, etc.</li>
+            <li>Have <strong>Kali Linux</strong> (or equivalent) installed and ready — native, VM, or live boot.</li>
+            <li>Come preloaded with tools like <strong>Burp Suite</strong>, <strong>Ghidra</strong>, <strong>Wireshark</strong>, and any other tooling you rely on for CTF challenges.</li>
+            <li>Ensure all tools are <strong>licensed, configured, and tested</strong> before the event day.</li>
+            <li>Mobile-only participation is <strong>not permitted</strong>.</li>
+          </ul>
+        </div>
 
         <div className="card">
           <h2 className="section-title">Guidelines</h2>

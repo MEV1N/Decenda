@@ -232,22 +232,22 @@ a:hover {
   animation: flicker 3s infinite;
 }
 
-/* Corner logos */
+/* Logos row — equally spaced flex container */
+.logos-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .corner-logo {
-  position: absolute;
-  top: 1.2rem;
   mix-blend-mode: multiply;
   filter: contrast(1.1);
-  width: 90px;
-  height: 90px;
-}
-
-.corner-logo-left {
-  left: 0.5rem;
-}
-
-.corner-logo-right {
-  right: 0.5rem;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
 }
 
 /* Centre dec logo */
@@ -258,41 +258,32 @@ a:hover {
   height: auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .hero {
     padding: 5rem 0.5rem 1.5rem;
   }
 
   .corner-logo {
-    width: 50px !important;
-    height: 50px !important;
-    top: 0.8rem;
-  }
-
-  .corner-logo-left {
-    left: 0.3rem;
-  }
-
-  .corner-logo-right {
-    right: 0.3rem;
+    width: 60px !important;
+    height: 60px !important;
   }
 
   .dec-logo {
-    max-width: 85vw !important;
-    width: 85vw !important;
+    max-width: 55vw !important;
+    width: 55vw !important;
     height: auto !important;
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 450px) {
   .corner-logo {
-    width: 38px !important;
-    height: 38px !important;
+    width: 40px !important;
+    height: 40px !important;
   }
 
   .dec-logo {
-    max-width: 78vw !important;
-    width: 78vw !important;
+    max-width: 42vw !important;
+    width: 42vw !important;
   }
 }
 

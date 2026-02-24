@@ -7,25 +7,6 @@ export default function Home() {
       <div className="wrapper">
         {/* ── HERO ── */}
         <section className="hero">
-          {/* TinkerHub — top left corner */}
-          <Image
-            src="/img/th logo.png"
-            alt="TinkerHub MBCCET"
-            width={90}
-            height={90}
-            className="corner-logo corner-logo-left"
-            style={{ objectFit: 'contain' }}
-          />
-
-          {/* MuLearn — top right corner */}
-          <Image
-            src="/img/mulogo.png"
-            alt="MuLearn MBCCET"
-            width={90}
-            height={90}
-            className="corner-logo corner-logo-right"
-            style={{ objectFit: 'contain' }}
-          />
 
           {/* Decenda 26 logo — centred */}
           <Image
@@ -139,7 +120,7 @@ export default function Home() {
             {/* Row 2 — centred below */}
             <div className="org-row" style={{ justifyContent: 'center' }}>
               <div className="org-item">
-                <div className="org-logo">404</div>
+                <Image src="/img/404.png" alt="Room Number 404" width={40} height={40} style={{ objectFit: 'contain' }} />
                 <div>
                   <p className="org-name">Room Number 404</p>
                 </div>

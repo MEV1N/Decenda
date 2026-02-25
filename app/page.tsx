@@ -28,10 +28,6 @@ export default function Home() {
 
           <p className="event-subtitle">Capture The Flag</p>
           <p className="event-not-avg">Not your average CTF.</p>
-          <p className="event-tagline">
-            Kerala&apos;s first gamified CTF experience — where every clue is a challenge
-            and every challenge is a game.
-          </p>
           <span className="free-badge">✦ Free Registration ✦</span>
           <div style={{ marginTop: '1.5rem' }}>
             <a href="#register" className="register-now-btn">Register Now</a>
@@ -71,11 +67,10 @@ export default function Home() {
         <div className="card">
           <h2 className="section-title">About the Event</h2>
           <p className="about-text">
-            <strong>Decenda 26</strong> is <em>not your average CTF</em>. This is
-            Kerala&apos;s <strong>first-of-a-kind gamified Capture The Flag</strong> — a
-            darkly immersive experience where challenges are woven into a game world.
-            Hunt hidden flags, crack ciphers, solve puzzles, and navigate a narrative
-            that rewards the sharpest minds. Every level unlocks something deeper.
+            <strong>Decenda 26</strong> is <em>not your average CTF</em> — a darkly
+            immersive experience where challenges are woven into a game world. Hunt
+            hidden flags, crack ciphers, solve puzzles, and navigate a narrative that
+            rewards the sharpest minds. Every level unlocks something deeper.
             Can you survive to the end?
           </p>
         </div>
@@ -116,6 +111,15 @@ export default function Home() {
           </ul>
         </div>
 
+        {/* ── GOODIES ── */}
+        <div className="card card-goodies">
+          <h2 className="section-title">🎁 Goodies Await</h2>
+          <p className="goodies-text">
+            Top performers will walk away with <strong>exclusive Decenda 26 swag</strong>,
+            goodies, and more surprises on the day. Show up, compete, and claim your loot.
+          </p>
+        </div>
+
         <div className="card">
           <h2 className="section-title">Guidelines</h2>
           <ul className="guidelines-list">
@@ -134,6 +138,12 @@ export default function Home() {
             <li>Unsportsmanlike conduct, harassment, or any disruptive behaviour will result in immediate removal from the event.</li>
             <li>Decisions made by the organizers and judges are final and binding.</li>
           </ul>
+        </div>
+
+        {/* ── SPONSORS ── */}
+        <div className="card">
+          <h2 className="section-title">⭐ Sponsors</h2>
+          <div className="sponsors-empty">Sponsors coming soon</div>
         </div>
 
         {/* ── ORGANIZERS ── */}

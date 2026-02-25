@@ -640,6 +640,50 @@ a:hover {
   background: linear-gradient(to right, var(--red-vivid), transparent);
 }
 
+/* ─── GOODIES HIGHLIGHT ─── */
+.card-goodies {
+  border-left-color: #ffaa00;
+  background: linear-gradient(135deg, rgba(255, 170, 0, 0.06) 0%, var(--bg-card) 60%);
+  box-shadow: 0 0 28px rgba(255, 170, 0, 0.12), inset 0 0 40px rgba(255, 170, 0, 0.04);
+}
+
+.card-goodies::before {
+  background: linear-gradient(to right, #ffaa00, transparent);
+}
+
+.card-goodies .section-title {
+  color: #ffaa00;
+  text-shadow: 0 0 12px rgba(255, 170, 0, 0.5);
+}
+
+.goodies-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  font-weight: 300;
+}
+
+.goodies-text strong {
+  color: #ffcc44;
+  font-weight: 700;
+}
+
+/* ─── SPONSORS ─── */
+.sponsors-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  border: 1px dashed var(--red-muted);
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+
 .section-title {
   font-size: 1.6rem;
   color: var(--red-vivid);

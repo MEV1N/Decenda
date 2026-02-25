@@ -1169,6 +1169,35 @@ a:hover {
   color: var(--text-primary);
 }
 
+/* ─── MAP ─── */
+.map-subtitle {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.map-wrap {
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--red-deep);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.map-wrap:hover {
+  box-shadow: 0 0 32px rgba(255, 0, 0, 0.22);
+}
+
+.map-wrap iframe {
+  display: block;
+  width: 100%;
+  /* dark mode filter: invert colours, rotate hue to kill the blue and pull it red */
+  filter: invert(90%) hue-rotate(170deg) saturate(0.6) brightness(0.85);
+}
+
 /* ─── FOOTER ─── */
 .site-footer {
   text-align: center;

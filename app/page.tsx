@@ -216,6 +216,23 @@ export default function Home() {
         <div id="register">
           <RegistrationForm />
         </div>
+
+        {/* ── LOCATION MAP ── */}
+        <div className="card map-card">
+          <h2 className="section-title">📍 Find Us</h2>
+          <p className="map-subtitle">Mar Baselios Christian College of Engineering and Technology, Peermade</p>
+          <div className="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.1071824222086!2d76.98048101078288!3d9.586028879981043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b064dc0bb61fb25%3A0x34518fde62e94372!2sMar%20Baselios%20Christian%20College%20of%20Engineering%20and%20Technology%2C%20Kuttikkanam!5e0!3m2!1sen!2sin!4v1772040275829!5m2!1sen!2sin"
+              width="100%"
+              height="320"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
       </div>
 
       {/* ── FOOTER ── */}

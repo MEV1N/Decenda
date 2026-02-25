@@ -237,7 +237,7 @@ export default function Home() {
 
       {/* ── FOOTER ── */}
       <footer className="site-footer">
-        <p>© 2026 Decenda 26 · MBCCET, Peermade · Organised by TinkerHub × MuLearn × Room 404</p>
+        <p>© 2026 Decenda 26 · MBCCET, Peermade · Organised by TinkerHub × MuLearn × Room Number 404</p>
       </footer>
     </>
   );

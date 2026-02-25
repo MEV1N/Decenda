@@ -740,20 +740,22 @@ a:hover {
 }
 
 .guidelines-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.7rem;
+  position: relative;
+  padding-left: 1.4rem;
   font-size: 0.95rem;
   color: var(--text-primary);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: normal;
 }
 
 .guidelines-list li::before {
   content: '▸';
   color: var(--red-vivid);
-  flex-shrink: 0;
-  margin-top: 2px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 /* ─── CHALLENGE CATEGORIES ─── */

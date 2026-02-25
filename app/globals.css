@@ -1211,21 +1211,182 @@ a:hover {
 }
 
 /* ─── RESPONSIVE ─── */
-@media (max-width: 600px) {
-  .event-title {
-    font-size: 3rem;
-    letter-spacing: 4px;
+
+/* ── Tablet / small desktop ≤ 700px ── */
+@media (max-width: 700px) {
+  .wrapper {
+    padding: 0 1rem 3rem;
+  }
+
+  .event-info-box {
+    padding: 1.2rem 1.2rem;
   }
 
   .card {
-    padding: 1.2rem;
+    padding: 1.4rem;
   }
 
   .form-card {
     padding: 1.4rem;
   }
+}
+
+/* ── Mobile ≤ 600px ── */
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 0 0.85rem 2.5rem;
+  }
+
+  .event-title {
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
+
+  /* Register button — full-width on mobile */
+  .register-now-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.85rem 1rem;
+    box-sizing: border-box;
+  }
+
+  /* Countdown — allow wrapping on narrow screens */
+  .countdown-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  .countdown-unit {
+    min-width: 56px;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .countdown-num {
+    font-size: 1.5rem;
+  }
+
+  .countdown-sep {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Event info box */
+  .event-info-box {
+    padding: 1rem;
+  }
+
+  .event-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-info-item.wide {
+    grid-column: 1;
+  }
+
+  /* Category grid — 2 cols */
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+
+  /* Cards */
+  .card {
+    padding: 1.2rem;
+  }
+
+  .form-card {
+    padding: 1.2rem;
+  }
+
+  /* Org items — stack vertically, centred */
+  .org-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .org-item {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
 
   .org-grid {
     gap: 0.7rem;
+  }
+
+  /* Contact — single column */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .goodies-text {
+    font-size: 0.95rem;
+  }
+
+  .map-wrap iframe {
+    height: 260px;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
+  }
+
+  .site-footer {
+    font-size: 0.65rem;
+    padding: 1.5rem 1rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* ── Small mobile ≤ 420px ── */
+@media (max-width: 420px) {
+  .wrapper {
+    padding: 0 0.65rem 2rem;
+  }
+
+  /* Badge — drop the angled clip-path on tiny screens */
+  .free-badge {
+    clip-path: none;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  /* Category grid — single col on very small phones */
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .countdown-unit {
+    min-width: 48px;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .countdown-num {
+    font-size: 1.3rem;
+  }
+
+  .countdown-sep {
+    font-size: 1.1rem;
+  }
+
+  .event-info-box {
+    padding: 0.85rem 0.75rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    gap: 0.4rem;
+  }
+
+  .map-wrap iframe {
+    height: 220px;
+  }
+
+  .card {
+    padding: 1rem 0.85rem;
   }
 }

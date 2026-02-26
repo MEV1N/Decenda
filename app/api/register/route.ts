@@ -30,17 +30,27 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        if (member2Email && !emailRegex.test(member2Email)) {
-            return NextResponse.json(
-                { success: false, message: "Member 2 email is invalid." },
-                { status: 400 }
-            );
-        }
-        if (member2Phone && !phoneRegex.test(member2Phone.replace(/\s/g, ""))) {
-            return NextResponse.json(
-                { success: false, message: "Member 2 phone must be 10 digits." },
-                { status: 400 }
-            );
+        const isMember2Filled = member2Name || member2Email || member2Phone || member2College;
+
+        if (isMember2Filled) {
+            if (!member2Name || !member2Email || !member2Phone || !member2College) {
+                return NextResponse.json(
+                    { success: false, message: "All Member 2 details are required if any are provided." },
+                    { status: 400 }
+                );
+            }
+            if (!emailRegex.test(member2Email)) {
+                return NextResponse.json(
+                    { success: false, message: "Member 2 email is invalid." },
+                    { status: 400 }
+                );
+            }
+            if (!phoneRegex.test(member2Phone.replace(/\s/g, ""))) {
+                return NextResponse.json(
+                    { success: false, message: "Member 2 phone must be 10 digits." },
+                    { status: 400 }
+                );
+            }
         }
 
         const existingEmail = await prisma.registration.findUnique({ where: { email } });

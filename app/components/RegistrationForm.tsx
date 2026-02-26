@@ -20,8 +20,10 @@ interface FieldErrors {
     email?: string;
     phone?: string;
     college?: string;
+    member2Name?: string;
     member2Email?: string;
     member2Phone?: string;
+    member2College?: string;
 }
 
 const WHATSAPP_LINK = 'https://chat.whatsapp.com/D3GwCvl3FszBRMpSOYMXUL';
@@ -65,11 +67,30 @@ export default function RegistrationForm() {
         }
         if (!form.college.trim()) errors.college = 'College name is required.';
 
-        if (form.member2Email.trim() && !emailRegex.test(form.member2Email)) {
-            errors.member2Email = 'Enter a valid email address.';
-        }
-        if (form.member2Phone.trim() && !phoneRegex.test(form.member2Phone.replace(/\s/g, ''))) {
-            errors.member2Phone = 'Enter a valid 10-digit phone number.';
+        const isMember2Filled =
+            form.member2Name.trim() !== '' ||
+            form.member2Email.trim() !== '' ||
+            form.member2Phone.trim() !== '' ||
+            form.member2College.trim() !== '';
+
+        if (isMember2Filled) {
+            if (!form.member2Name.trim()) errors.member2Name = 'Member 2 name is required.';
+
+            if (!form.member2Email.trim()) {
+                errors.member2Email = 'Member 2 email is required.';
+            } else if (!emailRegex.test(form.member2Email)) {
+                errors.member2Email = 'Enter a valid email address.';
+            }
+
+            if (!form.member2Phone.trim()) {
+                errors.member2Phone = 'Member 2 phone is required.';
+            } else if (!phoneRegex.test(form.member2Phone.replace(/\s/g, ''))) {
+                errors.member2Phone = 'Enter a valid 10-digit phone number.';
+            }
+
+            if (!sameCollege && !form.member2College.trim()) {
+                errors.member2College = 'Member 2 college is required.';
+            }
         }
 
         setFieldErrors(errors);
@@ -223,10 +244,11 @@ export default function RegistrationForm() {
                                 <label className="form-label" htmlFor="member2Name">Full Name</label>
                                 <input
                                     id="member2Name" name="member2Name" type="text"
-                                    className="form-input"
+                                    className={`form-input${fieldErrors.member2Name ? ' error' : ''}`}
                                     placeholder="Member 2's full name"
                                     value={form.member2Name} onChange={handleChange}
                                 />
+                                {fieldErrors.member2Name && <p className="field-error">⚠ {fieldErrors.member2Name}</p>}
                             </div>
 
                             <div className="form-group">
@@ -262,13 +284,16 @@ export default function RegistrationForm() {
                                     <span>Same as Team Leader</span>
                                 </label>
                                 {!sameCollege && (
-                                    <input
-                                        id="member2College" name="member2College" type="text"
-                                        className="form-input"
-                                        placeholder="Member 2's college or institution"
-                                        value={form.member2College} onChange={handleChange}
-                                        style={{ marginTop: '0.5rem' }}
-                                    />
+                                    <>
+                                        <input
+                                            id="member2College" name="member2College" type="text"
+                                            className={`form-input${fieldErrors.member2College ? ' error' : ''}`}
+                                            placeholder="Member 2's college or institution"
+                                            value={form.member2College} onChange={handleChange}
+                                            style={{ marginTop: '0.5rem' }}
+                                        />
+                                        {fieldErrors.member2College && <p className="field-error" style={{ marginTop: '0.25rem' }}>⚠ {fieldErrors.member2College}</p>}
+                                    </>
                                 )}
                                 {sameCollege && (
                                     <p className="same-college-note">{form.college}</p>

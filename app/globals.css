@@ -833,6 +833,46 @@ a:hover {
   letter-spacing: 2px;
 }
 
+/* ─── CORNER LOGOS ─── */
+.corner-logo {
+  position: fixed;
+  top: 1.1rem;
+  z-index: 100;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.corner-logo:hover {
+  opacity: 1;
+}
+
+.corner-logo-left {
+  left: 1.2rem;
+}
+
+.corner-logo-right {
+  right: 1.2rem;
+}
+
+@media (max-width: 500px) {
+  .corner-logo {
+    top: 0.6rem;
+  }
+
+  .corner-logo-left {
+    left: 0.6rem;
+  }
+
+  .corner-logo-right {
+    right: 0.6rem;
+  }
+
+  .corner-logo img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+}
+
 /* ─── CONTACT ─── */
 .contact-grid {
   display: grid;

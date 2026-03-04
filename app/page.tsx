@@ -5,6 +5,14 @@ import Countdown from './components/Countdown';
 export default function Home() {
   return (
     <>
+      {/* ── CORNER LOGOS ── */}
+      <div className="corner-logo corner-logo-left">
+        <Image src="/img/th logo.png" alt="TinkerHub" width={52} height={52} style={{ objectFit: 'contain' }} />
+      </div>
+      <div className="corner-logo corner-logo-right">
+        <Image src="/img/hive.png" alt="Hive" width={52} height={52} style={{ objectFit: 'contain' }} />
+      </div>
+
       <div className="wrapper">
         {/* ── HERO ── */}
         <section className="hero">
@@ -138,18 +146,13 @@ export default function Home() {
           </ul>
         </div>
 
-        {/* ── SPONSORS ── */}
-        <div className="card">
-          <h2 className="section-title">⭐ Sponsors</h2>
-          <div className="sponsors-empty">Sponsors coming soon</div>
-        </div>
+
 
         {/* ── ORGANIZERS ── */}
         <div className="card">
           <h2 className="section-title">⬡ Organised By</h2>
           <div className="org-grid">
-            {/* Row 1 */}
-            <div className="org-row">
+            <div className="org-row" style={{ justifyContent: 'center' }}>
               <div className="org-item">
                 <Image src="/img/th logo.png" alt="TinkerHub" width={40} height={40} style={{ objectFit: 'contain' }} />
                 <div>
@@ -157,25 +160,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="org-item">
-                <Image src="/img/mulogo.png" alt="MuLearn" width={40} height={40} style={{ objectFit: 'contain' }} />
-                <div>
-                  <p className="org-name">MuLearn MBCCET</p>
-                </div>
-              </div>
-            </div>
-            {/* Row 2 — centred below */}
-            <div className="org-row" style={{ justifyContent: 'center' }}>
-              <div className="org-item">
-                <Image src="/img/404.png" alt="Room Number 404" width={40} height={40} style={{ objectFit: 'contain' }} />
-                <div>
-                  <p className="org-name">Room Number 404</p>
-                </div>
-              </div>
-              <div className="org-item">
                 <Image src="/img/hive.png" alt="Hive" width={40} height={40} style={{ objectFit: 'contain' }} />
                 <div>
                   <p className="org-name">Hive</p>
-                  <p className="media-badge">MEDIA PARTNER</p>
                 </div>
               </div>
             </div>

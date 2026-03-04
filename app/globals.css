@@ -370,39 +370,11 @@ a:hover {
 }
 
 .dec-logo-wrap .dec-logo {
-  filter: blur(12px);
-  opacity: 0.5;
   display: block;
 }
 
 .dec-logo-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  pointer-events: none;
-}
-
-.dec-logo-title {
-  font-family: Impact, 'Arial Narrow', sans-serif;
-  font-size: clamp(2rem, 6vw, 3.2rem);
-  color: #ffffff;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-}
-
-.dec-logo-reveal {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: clamp(0.65rem, 2vw, 0.85rem);
-  color: var(--red-vivid);
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  text-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
-  animation: flicker 4s infinite;
+  display: none;
 }
 
 /* ─── COUNTDOWN ─── */

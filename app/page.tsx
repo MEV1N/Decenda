@@ -127,12 +127,10 @@ export default function Home() {
             <li>One registration per person — duplicate entries will be disqualified.</li>
             <li>Bring your own laptop. Mobile-only participation is not permitted.</li>
             <li>All tools and external resources are allowed unless explicitly prohibited by the organizers.</li>
-            <li>Collaboration between teams is strictly prohibited during the event.</li>
             <li><strong>Do not attack, probe, or interfere with the college network, infrastructure, or any systems outside the designated CTF environment.</strong></li>
             <li>Attacking or disrupting the CTF platform, challenge servers, or other participants&apos; machines is strictly forbidden.</li>
             <li>Denial-of-Service (DoS) attacks against any system — including CTF infrastructure — will result in immediate disqualification.</li>
             <li>Sharing flags, solutions, or hints with other teams during the event is prohibited.</li>
-            <li>Any form of brute-forcing or automated scanning against the CTF platform is not allowed unless the challenge explicitly requires it.</li>
             <li>Participants must not attempt to access, modify, or delete other teams&apos; data or submissions.</li>
             <li>All activities must remain within the scope defined by the organizers. Any out-of-scope action will lead to disqualification.</li>
             <li>Unsportsmanlike conduct, harassment, or any disruptive behaviour will result in immediate removal from the event.</li>

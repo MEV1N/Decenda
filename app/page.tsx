@@ -9,13 +9,6 @@ export default function Home() {
         {/* ── HERO ── */}
         <section className="hero">
 
-          {/* Org logos above the Decenda logo */}
-          <div className="hero-org-logos">
-            <Image src="/img/th logo.png" alt="TinkerHub" width={72} height={72} style={{ objectFit: 'contain' }} />
-            <Image src="/img/mulogo.png" alt="MuLearn" width={72} height={72} style={{ objectFit: 'contain' }} />
-            <Image src="/img/404.png" alt="Room Number 404" width={72} height={72} style={{ objectFit: 'contain' }} />
-            <Image src="/img/Frame 16.png" alt="Hive" width={72} height={72} style={{ objectFit: 'contain' }} />
-          </div>
 
           {/* Decenda 26 logo */}
           <div className="dec-logo-wrap">
@@ -154,25 +147,25 @@ export default function Home() {
           <div className="org-grid">
             <div className="org-row">
               <div className="org-item">
-                <Image src="/img/th logo.png" alt="TinkerHub" width={40} height={40} style={{ objectFit: 'contain' }} />
+                <Image src="/img/th logo.png" alt="TinkerHub" width={40} height={40} loading="lazy" style={{ objectFit: 'contain' }} />
                 <div>
                   <p className="org-name">TinkerHub MBCCET</p>
                 </div>
               </div>
               <div className="org-item">
-                <Image src="/img/mulogo.png" alt="MuLearn" width={40} height={40} style={{ objectFit: 'contain' }} />
+                <Image src="/img/mulogo.png" alt="MuLearn" width={40} height={40} loading="lazy" style={{ objectFit: 'contain' }} />
                 <div>
                   <p className="org-name">MuLearn MBCCET</p>
                 </div>
               </div>
               <div className="org-item">
-                <Image src="/img/404.png" alt="Room Number 404" width={40} height={40} style={{ objectFit: 'contain' }} />
+                <Image src="/img/404.png" alt="Room Number 404" width={40} height={40} loading="lazy" style={{ objectFit: 'contain' }} />
                 <div>
                   <p className="org-name">Room Number 404</p>
                 </div>
               </div>
               <div className="org-item">
-                <Image src="/img/Frame 16.png" alt="Hive" width={40} height={40} style={{ objectFit: 'contain' }} />
+                <Image src="/img/Frame 16.png" alt="Hive" width={40} height={40} loading="lazy" style={{ objectFit: 'contain' }} />
                 <div>
                   <p className="org-name">Hive</p>
                 </div>

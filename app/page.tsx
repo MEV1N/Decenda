@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import RegistrationForm from './components/RegistrationForm';
+
 import Countdown from './components/Countdown';
 
 export default function Home() {
@@ -29,10 +29,7 @@ export default function Home() {
 
           <p className="event-subtitle">Capture The Flag</p>
           <p className="event-not-avg">Not your average CTF.</p>
-          <span className="free-badge">✦ Free Registration ✦</span>
-          <div style={{ marginTop: '1.5rem' }}>
-            <a href="#register" className="register-now-btn">Register Now</a>
-          </div>
+
 
           {/* Countdown */}
           <Countdown />
@@ -202,9 +199,12 @@ export default function Home() {
           <div className="divider-line" />
         </div>
 
-        {/* ── REGISTRATION FORM ── */}
-        <div id="register">
-          <RegistrationForm />
+        {/* ── REGISTRATION CLOSED ── */}
+        <div id="register" className="card" style={{ textAlign: 'center', padding: '3rem 2rem' }}>
+          <h2 className="section-title">Registration Closed</h2>
+          <p style={{ color: 'var(--muted, #aaa)', marginTop: '0.75rem', fontSize: '1.05rem' }}>
+            Thank you for your interest in <strong>Decenda 26</strong>. Registrations are now closed.
+          </p>
         </div>
 
         {/* ── LOCATION MAP ── */}
